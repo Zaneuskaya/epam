@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.epam.training'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+ext {
+    springBootVersion = '2.0.9.RELEASE'
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-parent:${springBootVersion}")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

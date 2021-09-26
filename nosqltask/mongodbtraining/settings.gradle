@@ -1,0 +1,3 @@
+rootProject.name = 'mongodbtraining'
+include ':controller', ':model',':repository',':service'
+
